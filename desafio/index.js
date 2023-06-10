@@ -90,12 +90,12 @@ class TaskController {
   handleMenu() {
     let choice = MenuView.renderMenu(["Criar tarefa", "Listar tarefas", "Deletar tarefa"]);
     console.clear();
-    if (choice == 0) this.adicionarTarefa();
-    if (choice == 1) this.listarTarefas();
-    if (choice == 2) this.deletarTarefa();
+    if (choice == 0) this.addTask();
+    if (choice == 1) this.listTasks();
+    if (choice == 2) this.deleteTask();
   }
 
-  adicionarTarefa() {
+  addTask() {
     try {
       const taskInfo = MenuView.renderAddMenu();
       this.taskModel.addTask(taskInfo);
@@ -111,12 +111,12 @@ class TaskController {
     }
   }
 
-  listarTarefas() {
+  listTasks() {
     this.taskView.renderAll();
     this.handleMenu();
   }
 
-  deletarTarefa() {
+  deleteTask() {
     try {
       this.taskView.renderAll();
       const taskId = MenuView.renderDeleteMenu();
