@@ -12,9 +12,4 @@ const Task = Database.define("Task", {
   },
 });
 
-Task.create({
-  name: "Uma tarefa qualquer",
-  description: "Uma tarefa simples",
-});
-
 module.exports = Task;
