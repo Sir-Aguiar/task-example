@@ -121,6 +121,7 @@ class TaskController {
       this.taskView.renderAll();
       const taskId = MenuView.renderDeleteMenu();
       this.taskModel.removeTask(taskId);
+
       console.clear();
       console.log("Tarefa excluída com sucesso");
       setTimeout(() => {
