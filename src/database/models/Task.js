@@ -2,6 +2,16 @@ const { DataTypes } = require("sequelize");
 const Database = require("../database");
 
 const Task = Database.define("Task", {
+  id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    primaryKey: true,
+  },
+  session_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    primaryKey: true,
+  },
   name: {
     type: DataTypes.STRING(60),
     allowNull: false,
@@ -11,5 +21,6 @@ const Task = Database.define("Task", {
     allowNull: false,
   },
 });
+
 
 module.exports = Task;

@@ -1,7 +1,10 @@
 const { keyInSelect, question, questionInt } = require("readline-sync");
 
 class MenuView {
-  static renderMenu(options) {
+  static renderMenu(options, session) {
+    console.log("---------------")
+    console.log(`Sessão: ${session}`)
+    console.log("---------------")
     return keyInSelect(options, "Digite a opção desejada", {
       cancel: "Sair do programa",
     });

@@ -6,7 +6,6 @@ module.exports = {
     await queryInterface.createTable("tasks", {
       id: {
         type: Sequelize.INTEGER,
-        autoIncrement: true,
         allowNull: false,
         primaryKey: true,
       },
@@ -17,6 +16,11 @@ module.exports = {
       description: {
         type: Sequelize.STRING(255),
         allowNull: false,
+      },
+      session_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        primaryKey: true,
       },
       created_at: {
         type: Sequelize.DATE,
