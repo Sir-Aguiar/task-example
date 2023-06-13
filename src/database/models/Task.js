@@ -22,5 +22,4 @@ const Task = Database.define("Task", {
   },
 });
 
-
 module.exports = Task;
